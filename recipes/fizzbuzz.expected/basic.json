@@ -1,0 +1,14 @@
+[
+  {
+    "cmd": [
+      "make",
+      "build"
+    ],
+    "name": "Build"
+  },
+  {
+    "name": "$result",
+    "recipe_result": null,
+    "status_code": 0
+  }
+]
