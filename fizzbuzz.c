@@ -1,18 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int line(int num, char* out) {
+  if (num % 15 == 0) {
+    sprintf(out, "FizzBuzz");
+  } else if (num % 3 == 0) {
+    sprintf(out, "Fizz");
+  } else if (num % 5 == 0) {
+    sprintf(out, "Buzz");
+  } else {
+    sprintf(out, "%d", num);
+  }
+}
+
 void fizzbuzz(int i) {
   int j;
+  char out[256];
   for (j = 1; j <= i; j++) {
-    if (j % 15 == 0) {
-      printf("FizzBuzz\n");
-    } else if (j % 3 == 0) {
-      printf("Fizz\n");
-    } else if (j % 5 == 0) {
-      printf("Buzz\n");
-    } else {
-      printf("%d\n", j);
-    }
+    line(j, out);
+    puts(out);
   }
 }
 
